@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "1c5bca75-cbd9-475e-8156-73983ca2ac2e",
+		"name": "Node-CSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload CSV data and store it in DB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/upload",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"upload"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Upload csv file and store records in database"
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of all records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/data",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Upload csv file and store records in database"
+			},
+			"response": []
+		},
+		{
+			"name": "Get details by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/data/5bddb01bd2941c2c84b8923d",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"data",
+						"5bddb01bd2941c2c84b8923d"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Upload csv file and store records in database"
+			},
+			"response": []
+		},
+		{
+			"name": "Save New Entry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Release Year\":\"1901\",\n\t\"Title\":\"Kansas Saloon Smashers\",\n\t\"Origin/Ethnicity\":\"American\",\n\t\"Director\":\"Unknown\",\n\t\"Cast\":\"\",\n\t\"Genre\":\"unknown\",\n\t\"Wiki Page\":\"https://en.wikipedia.org/wiki/Kansas_Saloon_Smashers\",\n\t\"Plot\":\"A baradas\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}api/data",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Save new entry"
+			},
+			"response": []
+		},
+		{
+			"name": "Update the record",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Release Year\":\"1902\",\n\t\"Title\":\"Kansas Saloon Smashers\",\n\t\"Origin/Ethnicity\":\"American\",\n\t\"Director\":\"Unknown\",\n\t\"Cast\":\"\",\n\t\"Genre\":\"unknown\",\n\t\"Wiki Page\":\"https://en.wikipedia.org/wiki/Kansas_Saloon_Smashers\",\n\t\"Plot\":\"A baradas\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}api/data/5bddb01bd2941c2c84b8923f",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"data",
+						"5bddb01bd2941c2c84b8923f"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Provide the updated object with record id"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete record by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/data/5bddb01bd2941c2c84b8923d",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"data",
+						"5bddb01bd2941c2c84b8923d"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
